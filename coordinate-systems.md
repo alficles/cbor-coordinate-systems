@@ -77,7 +77,13 @@ relevant context.
 # Semantics
 
 The content of tag number 104 is a single CBOR data item, the type of which
-selects the method used to specify the CRS.
+selects the method used to specify the CRS. This document defines two
+permitted content types, described in the following subsections:
+
+- a text string (major type 3), interpreted as Well-Known Text;
+- an unsigned integer (major type 0), interpreted as an EPSG SRID.
+
+Content of any other type is not defined by this document.
 
 ## Well-known Text
 
