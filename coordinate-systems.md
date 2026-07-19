@@ -186,7 +186,7 @@ CRS for EPSG:4326, the World Geodetic System 1984 horizontal coordinate system
 used by GPS satellites, specified using an EPSG SRID.
 
 ```
-D8 68      # Geographic Coordinate System - tag(104)
+D8 68      # Coordinate Reference System  - tag(104)
    19 10E6 # EPSG:4326                    - unsigned(4326)
 
 # Diagnostic notation: 104(4326)
@@ -195,7 +195,7 @@ D8 68      # Geographic Coordinate System - tag(104)
 CRS for WGS 84 3D EGM96 geoid height [@?SR-ORG-7428] specified using WKT.
 
 ```
-D8 68             # Geographic Coordinate System - tag(104)
+D8 68             # Coordinate Reference System  - tag(104)
    79 0191        # OGC WKT                      - text(401)
       47454F4743535B225747532038342028
       33442045474D39362067656F69642068
