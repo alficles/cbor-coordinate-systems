@@ -1,8 +1,13 @@
 # OS cruft
 .DS_Store
 
-# xml2rfc / kramdown-rfc build artifacts
-*.html
+# xml2rfc / mmark build artifacts (regenerable via `make`)
+gen/*.xml
+gen/*.txt
+gen/*.html
 lib/
 .refcache/
 *.exp
+
+# Windows `2>nul` redirect artifact when `make clean` runs on Unix
+nul
