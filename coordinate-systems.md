@@ -24,7 +24,7 @@ organization = "Comcast"
 
 .# Abstract
 
-The Concise Binary Object Representation (CBOR, RFC 7049) is a data format
+The Concise Binary Object Representation (CBOR, RFC 8949) is a data format
 whose design goals include the possibility of extremely small code size,
 fairly small message size, and extensibility without the need for version
 negotiation.
@@ -62,7 +62,7 @@ components: [@?EDS1]
 # Objectives
 
 This document aims to address the specification of coordinate reference
-systems in CBOR [@!RFC7049] encoded data. This is accomplished using complete
+systems in CBOR [@!RFC8949] encoded data. This is accomplished using complete
 CRS specification or through a well-known spatial reference identifier.
 
 # Applicability
@@ -76,14 +76,14 @@ relevant context.
 
 # Semantics
 
-The CBOR CRS tag shall be associated with one of multiple CBOR data types.
-Each allowed type is associated with a different method of specifying a CRS.
+The content of tag number 104 is a single CBOR data item, the type of which
+selects the method used to specify the CRS.
 
 ## Well-known Text
 
 OGC [@?OGC] Well-known Text (WKT) [@!WKT] is a standarized format for CRS
-specification. When the CRS tag is associated with a Text String (CBOR Major
-type 3), the data shall be interpreted as OGC WKT. This allows for complete
+specification. When the tag content is a text string (major type 3), it is
+interpreted as OGC WKT. This allows for complete
 CRS specifcation of and subtype of CRS.
 
 ## EPSG Spatial Reference Identifier
@@ -94,9 +94,8 @@ is not intended to allow specification of an arbitrary SRID, but provides a
 way to reference an SRID in the European Pertroleum Survey Group's (EPSG) SRID
 database. EPSG numbers are a de-facto standard for CRS reference and are very
 commonly used. EPSG numbers can be searched and referenced in a number of
-places including [@?EPSG.io] and [@?SpatialReference.org]. When the CRS tag is
-associated with a basic numeric type (CBOR Major type 0), the data shall be
-interpreted as an EPSG SRID.
+places including [@?EPSG.io] and [@?SpatialReference.org]. When the tag content
+is an unsigned integer (major type 0), it is interpreted as an EPSG SRID.
 
 # IANA Considerations
 
@@ -109,7 +108,7 @@ with the present document as the specification reference.
 
 # Security Considerations
 
-The security considerations of [@!RFC7049] apply; the tag introduced here are
+The security considerations of [@!RFC8949] apply; the tag introduced here are
 not expected to raise security considerations beyond those.
 
 <reference anchor='CBOR-GC' target='https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag103-Geographic-Coordinates.md'>
@@ -179,6 +178,9 @@ not expected to raise security considerations beyond those.
 {backmatter}
 
 # Examples
+
+The examples use the CBOR diagnostic notation defined in Section 8 of
+[@!RFC8949], with each encoding shown as annotated hexadecimal.
 
 CRS for EPSG:4326, the World Geodetic System 1984 horizontal coordinate system
 used by GPS satellites, specified using an EPSG SRID.
