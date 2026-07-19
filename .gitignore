@@ -1,0 +1,8 @@
+# OS cruft
+.DS_Store
+
+# xml2rfc / kramdown-rfc build artifacts
+*.html
+lib/
+.refcache/
+*.exp
