@@ -89,8 +89,8 @@ Content of any other type is not defined by this document.
 
 OGC [@?OGC] Well-known Text (WKT) [@!WKT] is a standardized format for CRS
 specification. When the tag content is a text string (major type 3), it is
-interpreted as OGC WKT. This allows for complete
-CRS specification of and subtype of CRS.
+interpreted as OGC WKT. This allows a complete specification of a CRS of
+any subtype.
 
 ## EPSG Spatial Reference Identifier
 
