@@ -94,14 +94,16 @@ CRS specifcation of and subtype of CRS.
 
 ## EPSG Spatial Reference Identifier
 
-A spatial reference identifier (SRID) is a unique value which unambiguously
-identifies a CRS. Many vendors and registries provice SRIDs. This association
+A spatial reference identifier (SRID) is a code assigned by an authority
+to a CRS. The same code can denote different CRSs under different
+authorities. Many vendors and registries provice SRIDs. This association
 is not intended to allow specification of an arbitrary SRID, but provides a
 way to reference an SRID in the European Pertroleum Survey Group's (EPSG) SRID
 database. EPSG numbers are a de-facto standard for CRS reference and are very
 commonly used. EPSG numbers can be searched and referenced in a number of
-places including [@?EPSG.io] and [@?SpatialReference.org]. When the tag content
-is an unsigned integer (major type 0), it is interpreted as an EPSG SRID.
+places including [@?EPSG.io] and [@?SpatialReference.org]. The
+unsigned-integer form (major type 0) signifies the EPSG authority: the value
+is interpreted as an EPSG SRID.
 
 # IANA Considerations
 
