@@ -32,8 +32,8 @@ negotiation.
 In CBOR, one point of extensibility is the definition of CBOR tags. An
 existing CBOR tag, 103, allows for the representation of geographic
 coordinates. Proper exploitation of geographic coordinates requires an
-associated reference frame. The present document defines a CBOR tag for
-referencing the coordinate reference system (CRS) for a geographic coordinate.
+associated coordinate reference system (CRS). The present document defines a
+CBOR tag for referencing the CRS for a geographic coordinate.
 It is intended as the reference document for the IANA registration of the CBOR
 tag defined.
 
