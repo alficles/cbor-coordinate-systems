@@ -45,11 +45,11 @@ Specifying geographic coordinates for a location on Earth requires the
 definition of a coordinate reference system (CRS). A CRS is made up of several
 components: [@?EDS1]
 
-- Coordinate system: The X, Y grid upon which your data is overlayed and how
+- Coordinate system: The x, y grid upon which your data is overlaid and how
   you define where a point is located in space.
 
 - Horizontal and vertical units: The units used to define the grid along the
-  x, y (and z) axis.
+  x, y (and z) axes.
 
 - Datum: A modeled version of the shape of the Earth which defines the origin
   used to place the coordinate system in space. You will learn this further
@@ -87,19 +87,19 @@ Content of any other type is not defined by this document.
 
 ## Well-known Text
 
-OGC [@?OGC] Well-known Text (WKT) [@!WKT] is a standarized format for CRS
+OGC [@?OGC] Well-known Text (WKT) [@!WKT] is a standardized format for CRS
 specification. When the tag content is a text string (major type 3), it is
 interpreted as OGC WKT. This allows for complete
-CRS specifcation of and subtype of CRS.
+CRS specification of and subtype of CRS.
 
 ## EPSG Spatial Reference Identifier
 
 A spatial reference identifier (SRID) is a code assigned by an authority
 to a CRS. The same code can denote different CRSs under different
-authorities. Many vendors and registries provice SRIDs. This association
+authorities. Many vendors and registries provide SRIDs. This association
 is not intended to allow specification of an arbitrary SRID, but provides a
-way to reference an SRID in the European Pertroleum Survey Group's (EPSG) SRID
-database. EPSG numbers are a de-facto standard for CRS reference and are very
+way to reference an SRID in the European Petroleum Survey Group's (EPSG) SRID
+database. EPSG numbers are a de facto standard for CRS reference and are very
 commonly used. EPSG numbers can be searched and referenced in a number of
 places including [@?EPSG.io] and [@?SpatialReference.org]. The
 unsigned-integer form (major type 0) signifies the EPSG authority: the value
@@ -116,7 +116,7 @@ with the present document as the specification reference.
 
 # Security Considerations
 
-The security considerations of [@!RFC8949] apply; the tag introduced here are
+The security considerations of [@!RFC8949] apply; the tag introduced here is
 not expected to raise security considerations beyond those.
 
 <reference anchor='CBOR-GC' target='https://github.com/allthingstalk/cbor/blob/master/CBOR-Tag103-Geographic-Coordinates.md'>
